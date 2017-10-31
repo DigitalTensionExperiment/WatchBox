@@ -6,8 +6,8 @@ device files: /dev
 - block, character, directory
 
 libraries:
-- libc
-- glibc
+- libc (provides a library interface to use system calls)
+- glibc (the GNU version of libc)
 
 static libraries <> header files
 ** Binary programs include static libraries which make them bigger;
@@ -21,6 +21,39 @@ For those not in default: ld.so.conf
 Anything that's not standard: put the name of the directory right here;
 After modifications, run this to update the library cache:
 # ldconfig -v
+
+
+System calls:
+fork()
+exec()
+wait()
+
+# man man
+(2) System calls
+# man 2 intro
+Introduction to system calls
+# man 2 mmap
+Read about memory mappings
+
+
+Track systems calls for a command (ie: ls)
+# strace ls
+See the counters on this output:
+# strace -c ls
+**grep doesn't work on this b/c the results written to screen is not standOut, it's stdError;
+# strace ls 2>&1 | grep [...]
+
+For library calls information:
+# ltrace ...
+
+
+Signals:
+# man 7  signal
+Run a copy-and-write process on nothing to nowhere:
+# dd if=/dev/zero of=/dev/null &
+
+# kill -s USR1 $(pidof ...)
+** Here's where zombie.c becomes useful**
 
 [Kali]
 In Kali, ld.so.conf is not a file, but a directory;
