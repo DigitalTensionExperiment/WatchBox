@@ -1,0 +1,19 @@
+# <under construction>
+
+kernel modules: lsmod
+
+device files: /dev
+- block, character, directory
+
+libraries: ldd $(...)
+libc
+glibc
+
+[Kali]
+- /usr/lib/systemd/ has no system directory;
+
+Daemon processes have no stdIn;
+
+ARP is the protocol that translates from IP to MAC address;
+Run this to check to see the right MAC address to the right IP:
+# arp -a
