@@ -5,11 +5,27 @@ kernel modules: lsmod
 device files: /dev
 - block, character, directory
 
-libraries: ldd $(...)
-libc
-glibc
+libraries:
+- libc
+- glibc
+
+static libraries <> header files
+** Binary programs include static libraries which make them bigger;
+
+dynamic libraries - more efficient b/c they live as files on disk;
+# ldd $(...)
+
+Application doesn't have to know where to find shared libraries: ld.so.conf
+(helper program that reads default progrms)
+For those not in default: ld.so.conf
+Anything that's not standard: put the name of the directory right here;
+After modifications, run this to update the library cache:
+# ldconfig -v
 
 [Kali]
+In Kali, ld.so.conf is not a file, but a directory;
+It contains libc.donf ;
+
 - /usr/lib/systemd/ has no system directory;
 
 Daemon processes have no stdIn;
