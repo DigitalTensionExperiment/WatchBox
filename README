@@ -72,6 +72,9 @@ Run this to check to see the right MAC address to the right IP:
 # git clone git://git.sv.gnu.org/coreutils
 
 
+tldp.org: find advanced bash scripting guide(s) here;
+
+
 
 
 Advanced troubleshooting
@@ -123,6 +126,24 @@ internal commands
 
 external command
 - loaded from an executable file or disk (slower)
+
+If there is an internal and external command with the same name, the internal will be found and executed first
+
+
+
+
+
+
+$ ./mssglogrotate
+cp: /var/log/messages: No such file or directory
+./mssglogrotate: line 7: /var/log/messages: Permission denied
+log file copied and cleaned up
+
+
+
+
+
+
 
 
 

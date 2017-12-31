@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# copy contents of /var/log/messages to /var/log/messages.old
+# delete the contents of /var/log/messages
+
+cp /var/log/messages /var/log/messages.old
+cat /dev/null > /var/log/messages
+echo log file copied and cleaned up
+
+exit 0 
