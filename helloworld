@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Just a simple hello-world
+# Usage: ./hello
+
+clear
+
+echo hello world
+
+exit 0

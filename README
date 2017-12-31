@@ -95,6 +95,50 @@ This creates a binary file
 
 
 
+echo $PATH:
+
+/usr/local/sbin
+* for system binaries
+
+/usr/local/bin
+* for custom scripts that need to be available to everyone
+
+/usr/sbin
+
+/usr/bin
+* typically where you put scripts that you yourself has written
+
+/root/bin
+* in the home directory of root user
+
+
+
+
+
+
+internal commands
+- part of the bash shell
+- don't need to be loaded to disk
+- use [help] to see all internal commands
+
+external command
+- loaded from an executable file or disk (slower)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
