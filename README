@@ -66,3 +66,40 @@ Daemon processes have no stdIn;
 ARP is the protocol that translates from IP to MAC address;
 Run this to check to see the right MAC address to the right IP:
 # arp -a
+
+
+
+# git clone git://git.sv.gnu.org/coreutils
+
+
+
+
+Advanced troubleshooting
+
+performance optimization
+
+
+
+
+To compile hello.c
+
+# gcc hello.c -o hello
+
+This creates a binary file
+
+# ls -l hello*
+
+# ldd hello
+
+
+
+
+
+
+
+
+
+
+
+
+
