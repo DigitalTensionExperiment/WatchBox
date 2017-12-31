@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# For variable use between shells
+# Usage: ./subshellcommunication
+
+echo Which directory should be activated?
+read DIR
+
+cd $DIR
+pwd
+ls
+
+exit 0
+
+
+
+
+
+
+
+
+
+

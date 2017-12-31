@@ -142,6 +142,27 @@ log file copied and cleaned up
 
 
 
+How can we define variables at the start of a shell?
+
+/etc/profile
+* processed when opening a login shell;
+If you're seeing a shell prompt, the contents of this have been processed;
+
+/etc/.bashrc
+* processed at the opening of each subshell;
+
+
+
+
+
+
+
+Sourcing: the contents of one script can be used in another script;
+
+
+
+
+
 
 
 
