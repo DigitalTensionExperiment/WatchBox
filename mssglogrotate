@@ -2,8 +2,11 @@
 #
 # copy contents of /var/log/messages to /var/log/messages.old
 # delete the contents of /var/log/messages
+# Usage: ./mssglogrotate
 
-cp /var/log/messages /var/log/messages.old
+LOGFILE=/var/log/messages
+
+cp $LOGFILE $LOGFILE.old
 cat /dev/null > /var/log/messages
 echo log file copied and cleaned up
 

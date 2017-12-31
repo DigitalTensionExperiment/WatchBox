@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Ask what to stop and then kill it
+# Usage: ./killer
+
+echo Which process do you want to kill?
+read TOKILL
+
+kill $(ps aux | grep $TOKILL | grep -v grep | aws '{ print $2 }')
+
+
+
+
+
+
+
+
+
